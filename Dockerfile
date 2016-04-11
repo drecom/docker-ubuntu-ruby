@@ -6,23 +6,6 @@ FROM     drecom/ubuntu-base:latest
 
 MAINTAINER Gen Takahashi "gen.takahashi@drecom.co.jp"
 
-RUN apt-get update \
-&&  apt-get install -y \
-    git \
-    libssl-dev \
-    libreadline-dev \
-    imagemagick \
-    libmagick++-dev \
-    libqtwebkit-dev \
-    xvfb \
-    libffi-dev \
-    mysql-client \
-    libmysqlclient-dev \
-    libssl-dev \
-    libffi-dev \
-&&  apt-get clean \
-&&  rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
-
 RUN git clone git://github.com/sstephenson/rbenv.git /usr/local/rbenv \
 &&  git clone https://github.com/sstephenson/ruby-build.git /usr/local/rbenv/plugins/ruby-build \
 &&  git clone git://github.com/jf/rbenv-gemset.git /usr/local/rbenv/plugins/rbenv-gemset \
@@ -39,6 +22,7 @@ RUN echo 'export RBENV_ROOT=/usr/local/rbenv' >> /root/.bashrc \
 &&  echo 'eval "$(rbenv init -)"' >> /root/.bashrc
 
 ENV CONFIGURE_OPTS --disable-install-doc
+ENV PATH /usr/local/rbenv/bin:/usr/local/rbenv/shims:$PATH
 
 RUN eval "$(rbenv init -)"; rbenv install 2.3.0 \
 &&  eval "$(rbenv init -)"; rbenv global 2.3.0
