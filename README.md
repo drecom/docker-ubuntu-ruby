@@ -3,7 +3,7 @@
 
 A Ubuntu ruby docker container
 
-It's on [docker-hub](https://hub.docker.com/r/drecom/ubuntu-ruby/) and [github](https://github.com/gendre/docker-ubuntu-ruby/)
+It's on [docker-hub](https://hub.docker.com/r/drecom/ubuntu-ruby/) and [github](https://github.com/drecom/docker-ubuntu-ruby/)
 
 ## tags and links
 * `latest` [(master/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/master/Dockerfile)
