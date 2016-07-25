@@ -28,4 +28,3 @@ RUN eval "$(rbenv init -)"; rbenv install 2.3.0 \
 &&  eval "$(rbenv init -)"; rbenv global 2.3.0 \
 &&  eval "$(rbenv init -)"; gem update --system \
 &&  eval "$(rbenv init -)"; gem install bundler
-
