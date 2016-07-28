@@ -10,6 +10,9 @@ It's on [docker-hub](https://hub.docker.com/r/drecom/ubuntu-ruby/) and [github](
 * `2.3.1` [(2.3.1/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.3.1/Dockerfile)
 * `2.3.0` [(2.3.0/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.3.0/Dockerfile)
 * `2.2.3` [(2.2.3/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.2.3/Dockerfile)
+* `2.1.10` [(2.1.10/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.1.10/Dockerfile)
+* `2.0.0-p648` [(2.0.0-p648/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.0.0-p648/Dockerfile)
+* `1.9.3-p551` [(1.9.3-p551/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/1.9.3-p551/Dockerfile)
 
 ## how to build
 
