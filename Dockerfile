@@ -4,7 +4,7 @@
 
 FROM     drecom/ubuntu-base:latest
 
-MAINTAINER Gen Takahashi "gen.takahashi@drecom.co.jp"
+MAINTAINER Drecom Technical Development Department <pr_itn@drecom.co.jp>
 
 RUN git clone git://github.com/sstephenson/rbenv.git /usr/local/rbenv \
 &&  git clone https://github.com/sstephenson/ruby-build.git /usr/local/rbenv/plugins/ruby-build \
