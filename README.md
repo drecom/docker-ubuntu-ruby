@@ -7,6 +7,7 @@ It's on [docker-hub](https://hub.docker.com/r/drecom/ubuntu-ruby/) and [github](
 
 ## tags and links
 * `latest` [(master/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/master/Dockerfile)
+* `2.4.1` [(2.4.1/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.4.1/Dockerfile)
 * `2.4.0` [(2.4.0/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.4.0/Dockerfile)
 * `2.3.3` [(2.3.3/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.3.3/Dockerfile)
 * `2.3.2` [(2.3.2/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.3.2/Dockerfile)
