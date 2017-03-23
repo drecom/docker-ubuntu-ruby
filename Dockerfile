@@ -6,8 +6,8 @@ FROM     drecom/ubuntu-base:latest
 
 MAINTAINER Drecom Technical Development Department <pr_itn@drecom.co.jp>
 
-RUN git clone git://github.com/sstephenson/rbenv.git /usr/local/rbenv \
-&&  git clone https://github.com/sstephenson/ruby-build.git /usr/local/rbenv/plugins/ruby-build \
+RUN git clone git://github.com/rbenv/rbenv.git /usr/local/rbenv \
+&&  git clone git://github.com/rbenv/ruby-build.git /usr/local/rbenv/plugins/ruby-build \
 &&  git clone git://github.com/jf/rbenv-gemset.git /usr/local/rbenv/plugins/rbenv-gemset \
 &&  /usr/local/rbenv/plugins/ruby-build/install.sh
 ENV PATH /usr/local/rbenv/bin:$PATH
