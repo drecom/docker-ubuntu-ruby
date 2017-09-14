@@ -24,7 +24,7 @@ RUN echo 'export RBENV_ROOT=/usr/local/rbenv' >> /root/.bashrc \
 ENV CONFIGURE_OPTS --disable-install-doc
 ENV PATH /usr/local/rbenv/bin:/usr/local/rbenv/shims:$PATH
 
-RUN eval "$(rbenv init -)"; rbenv install 2.4.2 \
-&&  eval "$(rbenv init -)"; rbenv global 2.4.2 \
+RUN eval "$(rbenv init -)"; rbenv install 2.2.8 \
+&&  eval "$(rbenv init -)"; rbenv global 2.2.8 \
 &&  eval "$(rbenv init -)"; gem update --system \
 &&  eval "$(rbenv init -)"; gem install bundler
