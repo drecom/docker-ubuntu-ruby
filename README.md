@@ -7,15 +7,18 @@ It's on [docker-hub](https://hub.docker.com/r/drecom/ubuntu-ruby/) and [github](
 
 ## tags and links
 * `latest` [(master/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/master/Dockerfile)
+* `2.4.3` [(2.4.3/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.4.3/Dockerfile)
 * `2.4.2` [(2.4.2/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.4.2/Dockerfile)
 * `2.4.1` [(2.4.1/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.4.1/Dockerfile)
 * `2.4.0` [(2.4.0/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.4.0/Dockerfile)
+* `2.3.6` [(2.3.6/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.3.6/Dockerfile)
 * `2.3.5` [(2.3.5/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.3.5/Dockerfile)
 * `2.3.4` [(2.3.4/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.3.4/Dockerfile)
 * `2.3.3` [(2.3.3/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.3.3/Dockerfile)
 * `2.3.2` [(2.3.2/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.3.2/Dockerfile)
 * `2.3.1` [(2.3.1/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.3.1/Dockerfile)
 * `2.3.0` [(2.3.0/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.3.0/Dockerfile)
+* `2.2.9` [(2.2.9/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.2.9/Dockerfile)
 * `2.2.8` [(2.2.8/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.2.8/Dockerfile)
 * `2.2.7` [(2.2.7/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.2.7/Dockerfile)
 * `2.2.6` [(2.2.6/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.2.6/Dockerfile)
