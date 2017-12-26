@@ -26,4 +26,5 @@ ENV PATH /usr/local/rbenv/bin:/usr/local/rbenv/shims:$PATH
 
 RUN eval "$(rbenv init -)"; rbenv install 2.5.0 \
 &&  eval "$(rbenv init -)"; rbenv global 2.5.0 \
-&&  eval "$(rbenv init -)"; gem update --system
+&&  eval "$(rbenv init -)"; gem update --system \
+&&  eval "$(rbenv init -)"; gem install bundler -f
