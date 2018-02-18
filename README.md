@@ -1,4 +1,5 @@
 # docker-ubuntu-ruby
+[![Docker Hub Status](https://dockerbuildbadges.quelltext.eu/status.svg?organization=drecom&repository=ubuntu-ruby)](https://hub.docker.com/r/drecom/ubuntu-ruby/)
 [![CircleCI](https://circleci.com/gh/drecom/docker-ubuntu-ruby/tree/master.svg?style=svg)](https://circleci.com/gh/drecom/docker-ubuntu-ruby/tree/master)
 
 A Ubuntu ruby docker container
