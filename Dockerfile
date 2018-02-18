@@ -24,7 +24,7 @@ RUN echo 'export RBENV_ROOT=/usr/local/rbenv' >> /root/.bashrc \
 ENV CONFIGURE_OPTS --disable-install-doc
 ENV PATH /usr/local/rbenv/bin:/usr/local/rbenv/shims:$PATH
 
-ENV RBENV_VERSION 2.5.0
+ENV RBENV_VERSION 2.4.0
 
 RUN eval "$(rbenv init -)"; rbenv install $RBENV_VERSION \
 &&  eval "$(rbenv init -)"; rbenv global $RBENV_VERSION \
