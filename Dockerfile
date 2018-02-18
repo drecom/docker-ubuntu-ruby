@@ -29,4 +29,5 @@ ENV RBENV_VERSION 2.5.0
 RUN eval "$(rbenv init -)"; rbenv install $RBENV_VERSION \
 &&  eval "$(rbenv init -)"; rbenv global $RBENV_VERSION \
 &&  eval "$(rbenv init -)"; gem update --system \
-&&  eval "$(rbenv init -)"; gem install bundler -f
+&&  eval "$(rbenv init -)"; gem install bundler -f \
+&&  rm -rf /tmp/*
