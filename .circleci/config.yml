@@ -1,0 +1,50 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/image
+    docker:
+      - image: docker:stable-git
+    steps:
+      - checkout
+      - setup_remote_docker
+      - restore_cache:
+          keys:
+            - v1-{{ .Branch }}
+          paths:
+            - /caches/image.tar
+      - run:
+          name: Load Docker image layer cache
+          command: |
+            set +o pipefail
+            docker load -i /caches/image.tar | true
+      - run:
+          name: Build Docker image
+          command: |
+            docker build --cache-from=image -t ubuntu-ruby .
+      - run:
+          name: Save Docker image layer cache
+          command: |
+            mkdir -p /caches
+            docker save -o /caches/image.tar ubuntu-ruby
+      - save_cache:
+          key: v1-{{ .Branch }}-{{ epoch }}
+          paths:
+            - /caches/image.tar
+      - run:
+          name: Show docker image size
+          command: |
+            docker images
+            ls -l /caches/image.tar
+      - run:
+          name: Show versions
+          command: |
+            docker run -it --rm ubuntu-ruby bash -c "ruby -v"
+            docker run -it --rm ubuntu-ruby bash -c "gem -v"
+            docker run -it --rm ubuntu-ruby bash -c "bundle -v"
+
+workflows:
+  version: 2
+
+  build:
+    jobs:
+      - build
