@@ -21,6 +21,7 @@ It's on [docker-hub](https://hub.docker.com/r/drecom/ubuntu-ruby/) and [github](
 * `2.3.2` [(2.3.2/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.3.2/Dockerfile)
 * `2.3.1` [(2.3.1/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.3.1/Dockerfile)
 * `2.3.0` [(2.3.0/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.3.0/Dockerfile)
+* `2.2.10` [(2.2.10/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.2.10/Dockerfile)
 * `2.2.9` [(2.2.9/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.2.9/Dockerfile)
 * `2.2.8` [(2.2.8/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.2.8/Dockerfile)
 * `2.2.7` [(2.2.7/Dockerfile)](https://github.com/drecom/docker-ubuntu-ruby/blob/2.2.7/Dockerfile)
