@@ -1,33 +1,27 @@
-# sshd
-#
-# VERSION               0.0.1
+ARG RUBY_PATH=/usr/local/
+ARG RUBY_VERSION=2.6.0
 
-FROM     drecom/ubuntu-base:latest
+FROM drecom/ubuntu-base:16.04 AS rubybuild
+ARG RUBY_PATH
+ARG RUBY_VERSION
+RUN git clone git://github.com/rbenv/ruby-build.git $RUBY_PATH/plugins/ruby-build \
+&&  $RUBY_PATH/plugins/ruby-build/install.sh
+RUN ruby-build $RUBY_VERSION $RUBY_PATH
 
-MAINTAINER Drecom Technical Development Department <pr_itn@drecom.co.jp>
-
-RUN git clone git://github.com/rbenv/rbenv.git /usr/local/rbenv \
-&&  git clone git://github.com/rbenv/ruby-build.git /usr/local/rbenv/plugins/ruby-build \
-&&  git clone git://github.com/jf/rbenv-gemset.git /usr/local/rbenv/plugins/rbenv-gemset \
-&&  /usr/local/rbenv/plugins/ruby-build/install.sh
-ENV PATH /usr/local/rbenv/bin:$PATH
-ENV RBENV_ROOT /usr/local/rbenv
-
-RUN echo 'export RBENV_ROOT=/usr/local/rbenv' >> /etc/profile.d/rbenv.sh \
-&&  echo 'export PATH=/usr/local/rbenv/bin:$PATH' >> /etc/profile.d/rbenv.sh \
-&&  echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh
-
-RUN echo 'export RBENV_ROOT=/usr/local/rbenv' >> /root/.bashrc \
-&&  echo 'export PATH=/usr/local/rbenv/bin:$PATH' >> /root/.bashrc \
-&&  echo 'eval "$(rbenv init -)"' >> /root/.bashrc
-
-ENV CONFIGURE_OPTS --disable-install-doc
-ENV PATH /usr/local/rbenv/bin:/usr/local/rbenv/shims:$PATH
-
-ENV RBENV_VERSION 2.5.3
-
-RUN eval "$(rbenv init -)"; rbenv install $RBENV_VERSION \
-&&  eval "$(rbenv init -)"; rbenv global $RBENV_VERSION \
-&&  eval "$(rbenv init -)"; gem update --system \
-&&  eval "$(rbenv init -)"; gem install bundler -f \
-&&  rm -rf /tmp/*
+FROM ubuntu:16.04
+LABEL maintainer "Drecom Technical Development Department <pr_itn@drecom.co.jp>"
+ARG RUBY_PATH
+ENV PATH $RUBY_PATH/bin:$PATH
+RUN apt-get update && \
+    apt-get install -y \
+        git \
+        curl \
+        gcc \
+        make \
+        libssl-dev \
+        zlib1g-dev \
+        libmysqlclient-dev \
+        redis-server \
+        libsqlite3-dev
+COPY --from=rubybuild $RUBY_PATH $RUBY_PATH
+CMD [ "irb" ]
